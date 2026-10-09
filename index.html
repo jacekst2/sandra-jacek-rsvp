@@ -191,15 +191,14 @@ footer{text-align:center;color:#666;font-size:14px;padding:20px 22px 25px;border
 
 
 /* Kwiat wyłącznie na pierwszym ekranie formularza */
-.name-step{position:relative;padding-top:105px}
+.name-step{position:relative;padding-top:25px}
 .name-step::before{
   content:"";
   position:absolute;
-  top:12px;
-  left:50%;
-  transform:translateX(-50%);
-  width:76px;
-  height:76px;
+  top:-128px;
+  right:0;
+  width:108px;
+  height:108px;
   background-image:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABwUFRkVEhwZFxkgHhwiK0cuKycnK1c+QjRHZ1tta2VbZGJygKSLcnmbe2JkjsKQm6mut7m3bonJ18ey1qS0t7D/2wBDAR4gICslK1QuLlSwdWR1sLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLD/wgARCABHAEgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAH0gUzztrO18NM27miupCWTIrOUazdRLpXUS0S1ppVKZdHPWU22MdrRWqrNuCmPRjZMrlY1SwkAIBIAAf/EAB0QAAICAgMBAAAAAAAAAAAAAAABEBECIBIhMUH/2gAIAQEAAQUCh5JHIT39aUNjFlTmuyy7ijDwbG2czwSirhxQ0dMabaxF1q3yOIu5U5eQiitfot62/8QAFREBAQAAAAAAAAAAAAAAAAAAMBH/2gAIAQMBAT8BSr//xAAZEQACAwEAAAAAAAAAAAAAAAABEQAQIDD/2gAIAQIBAT8BipYYwIlgcf/EABsQAAIBBQAAAAAAAAAAAAAAAAEhABEwQEFQ/9oACAEBAAY/As5qA1stzY5H/8QAIBAAAgICAgMBAQAAAAAAAAAAAAERMRAhQVEgYXGBkf/aAAgBAQABPyHFyTZLp+e2TyQCsgQzfI3dQmmpWXDC0I2FjCRiz4dkjX6GmgJ8ex1X2zXaFirhsdMfWNxcDieyxM5XBAOE5Q9o2cSVOBfwdlkYrnYRAkLtjYkxKFl0XgkL35tGJRXj/9oADAMBAAIAAwAAABADUc0wIuSbItLFDwDJXLAACAAD/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERECEw/9oACAEDAQE/ECtiLtI0TXwpqCU1+P8A/8QAGREBAQEBAQEAAAAAAAAAAAAAAQARECAh/9oACAECAQE/ELASdBtjDOQ5P2LTBWku9Utvv//EACIQAQACAgIBBAMAAAAAAAAAAAEAESExQVEQIGFxgZGh0f/aAAgBAQABPxDwBbz0QXYgdS6bPU4LibDtKueIO2prts5YwJkrZ1DSWPPlNeOI695lzGdnW5VMQuSUJVFteHGFHtLljx3FeVwMkFc7ZlZ0YdwUbCiCTP5oGTqAABojr5tSlrEQOQimcns0RGhBHUX8ihSXZ+ktWUxNIFhBYShsLiglozLlT78wtVgwFuB3E/cqo7fz5LTwuYGDCWAnEH0ysYr5lAHHkqw3ODkhboubDbfr2J9wBQo9P//Z");
   background-repeat:no-repeat;
   background-position:center;
@@ -207,6 +206,7 @@ footer{text-align:center;color:#666;font-size:14px;padding:20px 22px 25px;border
   pointer-events:none;
 }
 .name-step h2{text-align:center}
+@media(max-width:520px){.name-step::before{top:-112px;right:0;width:88px;height:88px}}
 @media(max-width:520px){
   .name-step{padding-top:94px}
   .name-step::before{width:66px;height:66px;top:10px}
