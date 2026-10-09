@@ -192,20 +192,28 @@ footer{text-align:center;color:#666;font-size:14px;padding:20px 22px 25px;border
 
 /* Kwiat wyłącznie na pierwszym ekranie formularza */
 
-.name-flower{
+
+
+/* Kwiat wyłącznie w nagłówku pierwszego ekranu RSVP */
+header{position:relative}
+.header-flower{
   position:absolute;
-  top:20px;
-  right:20px;
-  width:86px;
-  height:86px;
-  object-fit:contain;
-  display:block;
-  z-index:10;
+  top:18px;
+  right:18px;
+  width:88px;
+  height:88px;
+  background-image:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABwUFRkVEhwZFxkgHhwiK0cuKycnK1c+QjRHZ1tta2VbZGJygKSLcnmbe2JkjsKQm6mut7m3bonJ18ey1qS0t7D/2wBDAR4gICslK1QuLlSwdWR1sLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLD/wgARCABHAEgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAH0gUzztrO18NM27miupCWTIrOUazdRLpXUS0S1ppVKZdHPWU22MdrRWqrNuCmPRjZMrlY1SwkAIBIAAf/EAB0QAAICAgMBAAAAAAAAAAAAAAABEBECIBIhMUH/2gAIAQEAAQUCh5JHIT39aUNjFlTmuyy7ijDwbG2czwSirhxQ0dMabaxF1q3yOIu5U5eQiitfot62/8QAFREBAQAAAAAAAAAAAAAAAAAAMBH/2gAIAQMBAT8BSr//xAAZEQACAwEAAAAAAAAAAAAAAAABEQAQIDD/2gAIAQIBAT8BipYYwIlgcf/EABsQAAIBBQAAAAAAAAAAAAAAAAEhABEwQEFQ/9oACAEBAAY/As5qA1stzY5H/8QAIBAAAgICAgMBAQAAAAAAAAAAAAERMRAhQVEgYXGBkf/aAAgBAQABPyHFyTZLp+e2TyQCsgQzfI3dQmmpWXDC0I2FjCRiz4dkjX6GmgJ8ex1X2zXaFirhsdMfWNxcDieyxM5XBAOE5Q9o2cSVOBfwdlkYrnYRAkLtjYkxKFl0XgkL35tGJRXj/9oADAMBAAIAAwAAABADUc0wIuSbItLFDwDJXLAACAAD/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERECEw/9oACAEDAQE/ECtiLtI0TXwpqCU1+P8A/8QAGREBAQEBAQEAAAAAAAAAAAAAAQARECAh/9oACAECAQE/ELASdBtjDOQ5P2LTBWku9Utvv//EACIQAQACAgIBBAMAAAAAAAAAAAEAESExQVEQIGFxgZGh0f/aAAgBAQABPxDwBbz0QXYgdS6bPU4LibDtKueIO2prts5YwJkrZ1DSWPPlNeOI695lzGdnW5VMQuSUJVFteHGFHtLljx3FeVwMkFc7ZlZ0YdwUbCiCTP5oGTqAABojr5tSlrEQOQimcns0RGhBHUX8ihSXZ+ktWUxNIFhBYShsLiglozLlT78wtVgwFuB3E/cqo7fz5LTwuYGDCWAnEH0ysYr5lAHHkqw3ODkhboubDbfr2J9wBQo9P//Z");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
   pointer-events:none;
+  z-index:2;
 }
+header.flower-hidden .header-flower{display:none}
 @media(max-width:520px){
-  .name-flower{top:14px;right:12px;width:68px;height:68px}
+  .header-flower{top:12px;right:10px;width:64px;height:64px}
 }
+
 </style>
 </head>
 <body>
@@ -220,7 +228,8 @@ footer{text-align:center;color:#666;font-size:14px;padding:20px 22px 25px;border
         Prosimy o potwierdzenie obecności do<br><strong>31 grudnia 2026 r.</strong><br>
         Po tym terminie ankieta nie będzie już dostępna.
       </p>
-  <img class="name-flower" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABwUFRkVEhwZFxkgHhwiK0cuKycnK1c+QjRHZ1tta2VbZGJygKSLcnmbe2JkjsKQm6mut7m3bonJ18ey1qS0t7D/2wBDAR4gICslK1QuLlSwdWR1sLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLD/wgARCABHAEgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAH0gUzztrO18NM27miupCWTIrOUazdRLpXUS0S1ppVKZdHPWU22MdrRWqrNuCmPRjZMrlY1SwkAIBIAAf/EAB0QAAICAgMBAAAAAAAAAAAAAAABEBECIBIhMUH/2gAIAQEAAQUCh5JHIT39aUNjFlTmuyy7ijDwbG2czwSirhxQ0dMabaxF1q3yOIu5U5eQiitfot62/8QAFREBAQAAAAAAAAAAAAAAAAAAMBH/2gAIAQMBAT8BSr//xAAZEQACAwEAAAAAAAAAAAAAAAABEQAQIDD/2gAIAQIBAT8BipYYwIlgcf/EABsQAAIBBQAAAAAAAAAAAAAAAAEhABEwQEFQ/9oACAEBAAY/As5qA1stzY5H/8QAIBAAAgICAgMBAQAAAAAAAAAAAAERMRAhQVEgYXGBkf/aAAgBAQABPyHFyTZLp+e2TyQCsgQzfI3dQmmpWXDC0I2FjCRiz4dkjX6GmgJ8ex1X2zXaFirhsdMfWNxcDieyxM5XBAOE5Q9o2cSVOBfwdlkYrnYRAkLtjYkxKFl0XgkL35tGJRXj/9oADAMBAAIAAwAAABADUc0wIuSbItLFDwDJXLAACAAD/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERECEw/9oACAEDAQE/ECtiLtI0TXwpqCU1+P8A/8QAGREBAQEBAQEAAAAAAAAAAAAAAQARECAh/9oACAECAQE/ELASdBtjDOQ5P2LTBWku9Utvv//EACIQAQACAgIBBAMAAAAAAAAAAAEAESExQVEQIGFxgZGh0f/aAAgBAQABPxDwBbz0QXYgdS6bPU4LibDtKueIO2prts5YwJkrZ1DSWPPlNeOI695lzGdnW5VMQuSUJVFteHGFHtLljx3FeVwMkFc7ZlZ0YdwUbCiCTP5oGTqAABojr5tSlrEQOQimcns0RGhBHUX8ihSXZ+ktWUxNIFhBYShsLiglozLlT78wtVgwFuB3E/cqo7fz5LTwuYGDCWAnEH0ysYr5lAHHkqw3ODkhboubDbfr2J9wBQo9P//Z" alt="" aria-hidden="true">
+  
+  <div class="header-flower" aria-hidden="true"></div>
 </header>
 
     <main id="formView">
@@ -457,7 +466,7 @@ guestNameInput.addEventListener("input", function() {
 });
 
 nameNext.addEventListener("click", function() {
-  document.querySelector(".name-flower")?.classList.add("hidden");
+  document.querySelector("header")?.classList.add("flower-hidden");
   if (!isFullName(guestNameInput.value)) {
     guestNameInput.focus();
     return;
