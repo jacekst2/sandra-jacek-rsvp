@@ -192,17 +192,21 @@ footer{text-align:center;color:#666;font-size:14px;padding:20px 22px 25px;border
 
 /* Kwiat wyłącznie na pierwszym ekranie formularza */
 
+.name-step{position:relative}
 .name-flower{
   display:block;
+  position:absolute;
+  top:-135px;
+  right:12px;
   width:100px;
   height:100px;
   object-fit:contain;
-  margin:-112px 12px 8px auto;
-  position:relative;
-  z-index:2;
+  margin:0;
+  z-index:20;
+  pointer-events:none;
 }
 @media(max-width:520px){
-  .name-flower{width:88px;height:88px;margin-top:-116px;margin-right:10px;margin-bottom:12px}
+  .name-flower{top:-128px;right:10px;width:88px;height:88px}
 }
 </style>
 </head>
