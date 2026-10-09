@@ -200,6 +200,9 @@ header{position:relative}
 header.flower-hidden .header-flower{display:none}
 @media(max-width:520px){.header-flower{top:12px;right:10px;width:64px;height:64px}}
 
+
+/* Płaski kwiatek tylko podczas wypełniania formularza, nie na ekranach podsumowania */
+body:has(#rsvpForm.hidden) .header-flower{display:none!important}
 </style>
 </head>
 <body>
