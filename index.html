@@ -214,7 +214,7 @@ body:has(#rsvpForm.hidden) .header-flower{display:none!important}
       <div class="date">10 lipca 2027</div>
       <p class="intro">
         Chcielibyśmy wspólnie z Wami świętować ten wyjątkowy dzień.<br>
-        Prosimy o potwierdzenie obecności do<br><strong>31 grudnia 2026 r.</strong><br>
+        Prosimy o potwierdzenie obecności do<br><strong>31 stycznia 2027 r.</strong><br>
         Po tym terminie ankieta nie będzie już dostępna.
       </p>
   
@@ -332,7 +332,7 @@ body:has(#rsvpForm.hidden) .header-flower{display:none!important}
 
 <script>
 const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbx4ckhChlVVnsPBmAboJrwNQJ1b1D9PZrVX-YmHojEZfBZSGO0I-5gP_6NESQaKxAOmJQ/exec";
-const RSVP_DEADLINE = new Date("2027-01-01T00:00:00+01:00");
+const RSVP_DEADLINE = new Date("2027-02-01T00:00:00+01:00");
 
 function isRsvpOpen() {
   return new Date() < RSVP_DEADLINE;
@@ -347,7 +347,7 @@ function showClosedForm() {
     <div class="heart">💌</div>
     <h2>Potwierdzenie zostało zakończone</h2>
     <p>
-      Termin potwierdzenia obecności upłynął 31 grudnia 2026 r.
+      Termin potwierdzenia obecności upłynął 31 stycznia 2027 r.
     </p>
     <p class="signature">Sandra &amp; Jacek</p>`;
   form.parentNode.insertBefore(box, form);
